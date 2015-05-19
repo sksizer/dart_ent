@@ -1,0 +1,11 @@
+digraph TreeNodeStateDiagram {
+	NodeUninitialized -> LoadingState;
+	LoadingError -> LoadingState;
+	LoadingState -> LoadingError;
+	LoadingState -> ContainerUninitialized;
+	LoadingState -> Leaf;
+	ContainerUninitialized;
+	ContainerUninitialized -> ChildrenLoading -> ChildrenLoaded;
+	ChildrenLoading -> ChildrenLoadingError;
+	ChildrenLoadingError -> ChildrenLoading;
+}

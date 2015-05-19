@@ -12,3 +12,8 @@ packages
 
 # Include when developing application packages.
 pubspec.lock
+
+.DS_Store
+.idea
+*.swp
+*.bak
